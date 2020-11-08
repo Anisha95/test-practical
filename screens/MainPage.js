@@ -81,7 +81,8 @@ class MainPage extends Component {
       <View style={styles.mainView}>
         <Text style={{margin: '5%', fontSize: 22}}>{titleText}</Text>
         <FlatList
-          style={{width: '100%',}}
+          style={{width: '100%'}}
+          keyExtractor = { (item, index) => index.toString()}
           data={this.state.data}
           extraData={this.state}
           renderItem={this.renderItem}
